@@ -2,6 +2,9 @@ package main
 
 import (
 	"context"
+	"log"
+	"net"
+
 	noteV1 "github.com/AndrewEminov/auth/internal/api/note_v1"
 	userV1 "github.com/AndrewEminov/auth/internal/api/user_v1"
 	noteRepository "github.com/AndrewEminov/auth/internal/repository/note"
@@ -13,8 +16,6 @@ import (
 	"github.com/jackc/pgx/v4/pgxpool"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"log"
-	"net"
 )
 
 const grpcPort = ":50051"
